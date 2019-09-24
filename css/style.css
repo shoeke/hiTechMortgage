@@ -70,11 +70,16 @@ a {
     margin: 0;
     padding: 0;
     line-height: 1;
-
   }
 .grid-wrap {
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    grid-template-areas: 
+    "intro"
+    "loan" 
+    "refi"
+    "footer";
 }
  /* global section images*/
 .img-cell {
@@ -101,7 +106,6 @@ a {
     height: 380px;
     background-position: 75% 0%;
 }
-
 .home-icon {
     width: 170px;
     z-index: 1;
@@ -110,7 +114,6 @@ a {
     position: relative;
     top: 375px;
 }
-
 .intro .tagline {
     margin-top: 100px;
 }
@@ -130,7 +133,6 @@ a {
   border-top: 28px solid #fff;
 }
 /* loan - refi components shared area */
-
 .loan h1, .refi h1 {
     padding: 1.25rem .5rem;
     width: 100%;
@@ -138,6 +140,7 @@ a {
 /* loan area */
 .loan {
     background-color: var(--fade-blue-lt);
+    grid-area: loan;
 }
 .loan h1 {
     background-color: var(--fade-blue);
@@ -145,12 +148,11 @@ a {
 /* refi area */
 .refi {
     background-color: var(--fade-red);
+    grid-area: refi;
 }
 .refi h1 {
     background-color: var(--bg-red);
 }
-
-
 /* email form */
 .email-form {
     width: 100%;
@@ -199,4 +201,26 @@ footer ul {
 .social-links img {
     display: flex;
     justify-self: flex-start
+}
+
+@media only screen and (min-width:768px) {
+   
+    .grid-wrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 200px;
+        grid-template-areas: 
+        "loan refi"
+        "loan refi"
+        "footer footer";
+    }
+    .intro {
+        display: none;
+    }
+    .loan {
+        border-right: 5px solid var(--main-red);
+    }
+.loan-img {
+    height: 380px;
+}
+
 }
