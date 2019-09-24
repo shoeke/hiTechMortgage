@@ -13,7 +13,12 @@ html {
     font-size: 16px;
     font-family: var(--main-font-family);
     color: var(--darkest-blue);
-}  
+}
+.flex-cc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 h1, h2, h3, h4 {
     font-weight: 800;
     text-align: center;
@@ -125,11 +130,7 @@ a {
   border-top: 28px solid #fff;
 }
 /* loan - refi components shared area */
-.loan, .refi {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+
 .loan h1, .refi h1 {
     padding: 1.25rem .5rem;
     width: 100%;
@@ -152,9 +153,6 @@ a {
 
 /* email form */
 .email-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     max-width: 400px;
 }
@@ -188,14 +186,17 @@ a {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 2rem 1rem;
 }
 footer ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 1rem;
+}
+.social-links {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.social-links img {
+    display: flex;
+    justify-self: flex-start
 }
