@@ -3,9 +3,10 @@
     --darkest-blue: #272C2F;
     --main-blue: #304D5F;
     --bg-blue: rgb(74, 100, 126);
-    --bg-red: rgba(202, 95, 106, 0.605);
+    --bg-red: rgba(202, 95, 106, 0.805);
     --fade-blue: rgba(48, 91, 118, 0.673);
     --fade-blue-lt: rgba(48, 91, 118, 0.413);
+    --fade-red: rgba(202, 95, 106, 0.450);
     --main-font-family: 'Raleway', sans-serif;
   }
 html {
@@ -32,7 +33,7 @@ h3 {
     font-size: 2.75rem;
     font-weight: 300;
     color: var(--main-red);
-    margin: 3rem 0;
+    margin: 3rem 0 3.5rem;
 }
 h4 {
     font-size: 1.35rem;
@@ -45,6 +46,13 @@ p {
     line-height: 2;
     padding: 1.5rem;
 }
+a {
+    text-decoration: none;
+    color: var(--darkest-blue);
+    font-family: optima, classico-urw, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
 .lead-in {
     font-weight: 800;
 }
@@ -54,47 +62,39 @@ p {
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
   }
 .grid-wrap {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
-  /* section styles */
-
-.intro-loan-img {
-    background-image: url("../images/carrySmIntro.jpg");
-    height: 475px;
+ /* global section images*/
+.img-cell {
     width: 100%;
     background-size: cover;
-    background-position: 68% 0%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     box-shadow:0px 2px 5px var(--fade-blue);
+}
+  /* section styles */
+.intro-loan-img {
+    background-image: url("../images/carrySmIntro.jpg");
+    height: 475px;
+    background-position: 68% 0%;
 }
 .loan-img {
     background-image: url("../images/upLook.jpg");
     height: 290px;
-    width: 100%;
-    background-size: cover;
     background-position: 50% 0%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    box-shadow:0px 2px 5px var(--fade-blue);
 }
 .refi-img {
     background-image: url("../images/planning.jpg");
     height: 380px;
-    width: 100%;
-    background-size: cover;
     background-position: 75% 0%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    box-shadow:0px 2px 5px var(--fade-blue);
-    
 }
 
 .home-icon {
@@ -143,7 +143,7 @@ p {
 }
 /* refi area */
 .refi {
-    background-color: var(--bg-red);
+    background-color: var(--fade-red);
 }
 .refi h1 {
     background-color: var(--bg-red);
@@ -185,4 +185,17 @@ p {
 .refi .email-form button {
     background-color: var(--main-red);
     box-shadow: 2px 2px 5px var(--main-red);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
 }
