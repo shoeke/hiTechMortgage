@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 } 
 h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     color: #fff;
 } 
 h2 {
@@ -38,7 +38,7 @@ h3 {
     font-size: 2.75rem;
     font-weight: 300;
     color: var(--main-red);
-    margin: 3rem 0 3.5rem;
+    margin: 2rem 0;
 }
 h4 {
     font-size: 1.35rem;
@@ -67,16 +67,19 @@ a {
     font-style: normal;
     font-weight: 400;
     text-align: center;
-    margin: 0;
+    margin: 1rem 0 0 0;
     padding: 0;
     line-height: 1;
   }
 .grid-wrap {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
     "intro"
+    "banner" 
     "loan" 
     "refi"
     "footer";
@@ -91,6 +94,24 @@ a {
     box-shadow:0px 2px 5px var(--fade-blue);
 }
   /* section styles */
+  #desktop-only {
+      display: none;
+  }
+.banner {
+    grid-area: banner;
+    position: absolute;
+    top: 560px;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.spacer {
+    height: 345px;
+    background-color: #fff;
+}
+
 .intro-loan-img {
     background-image: url("../images/carrySmIntro.jpg");
     height: 475px;
@@ -220,7 +241,7 @@ footer ul li {
 @media only screen and (min-width:768px) {
    
     .grid-wrap {
-        max-width: 1400px;
+        
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 200px;
@@ -228,6 +249,19 @@ footer ul li {
         "loan refi"
         "loan refi"
         "footer footer";
+    }
+    #desktop-only {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+        left: 50%;
+        margin-left: -85px;
+        
+    }
+    .banner {
+        top: 360px;
+        padding-top: 1rem;
     }
     .intro {
         display: none;
@@ -270,7 +304,13 @@ footer ul li {
     footer div:nth-of-type(1) {
         order: 4;
     }
+    .loan h1, .refi h1 {
+        position: relative;
+        top: 10%;
+        width: 75%;
+    }
 }
+
 @media only screen and (min-width:1000px) {
  footer ul {
     flex-direction: row;
