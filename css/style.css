@@ -73,6 +73,7 @@ a {
   }
 .grid-wrap {
     max-width: 1400px;
+    min-width: 330px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
@@ -105,6 +106,7 @@ a {
     background-color: #fff;
     width: 100%;
     max-width: 1400px;
+    min-width: 330px;
     margin: 0 auto;
 }
 .spacer {
@@ -288,9 +290,6 @@ footer ul li {
         display: none;
     }
 
-    footer ul  {
-        /*width: 50%;*/
-    }
     .social-links {
         width: 10%;
     }

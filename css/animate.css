@@ -1,0 +1,59 @@
+
+
+
+#animateLogo {
+    position: absolute;
+    z-index: 5;
+    width: 600px;
+    top: 10%;
+    left: 50%;
+    margin-left: -300px;
+    animation: turnIt 3s linear 1, shrinkItMobile 3s ease-in-out forwards;
+}
+
+@keyframes turnIt {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shrinkItMobile {
+    from {
+        width: 600px;
+        top: 10%;
+        left: 50%;
+        margin-left: -300px;
+    }
+    to {
+        width: 170px;
+        top: 375px;
+        left: 50%;
+        margin-left: -85px;
+    }
+}
+@keyframes shrinkItDesktop {
+    from {
+        width: 600px;
+        top: 10%;
+        left: 50%;
+        margin-left: -300px;
+    }
+    to {
+        width: 170px;
+        top: -50px;
+        left: 50%;
+        margin-left: -85px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #animateLogo {
+        animation: turnIt 3s linear 1, shrinkItDesktop 3s ease-in-out forwards;
+    }
+
+
+}
