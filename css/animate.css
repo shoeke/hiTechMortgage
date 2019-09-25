@@ -22,17 +22,22 @@
 }
 
 @keyframes shrinkItMobile {
-    from {
+    0% {
         width: 600px;
         top: 10%;
         left: 50%;
         margin-left: -300px;
+        opacity: 1.0;
     }
-    to {
+    95% {
+        opacity: 1.0;
+    }
+    100% {
         width: 170px;
         top: 375px;
         left: 50%;
         margin-left: -85px;
+        opacity: 0.0;
     }
 }
 @keyframes shrinkItDesktop {
