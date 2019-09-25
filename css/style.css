@@ -112,6 +112,7 @@ a {
 .spacer {
     height: 345px;
     background-color: #fff;
+    box-shadow: inset 0px 2px 3px var(--fade-blue-lt);
 }
 
 .intro-loan-img {
@@ -253,7 +254,7 @@ footer ul li {
         "footer footer";
     }
     #desktop-only {
-        display: block;
+        display: none;
         position: absolute;
         z-index: 2;
         top: -50px;
@@ -264,6 +265,8 @@ footer ul li {
     .banner {
         top: 360px;
         padding-top: 1rem;
+        box-shadow: 0px 2px 5px var(--fade-blue-lt),
+        inset 0px 2px 3px var(--fade-blue-lt);
     }
     .intro {
         display: none;

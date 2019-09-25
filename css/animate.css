@@ -8,7 +8,7 @@
     top: 10%;
     left: 50%;
     margin-left: -300px;
-    animation: turnIt 3s linear 1, shrinkItMobile 3s ease-in-out forwards;
+    animation: turnIt 1.25s linear 1, shrinkItMobile 1.25s ease-in-out forwards;
 }
 
 @keyframes turnIt {
@@ -57,7 +57,7 @@
 
 @media only screen and (min-width:768px) {
     #animateLogo {
-        animation: turnIt 3s linear 1, shrinkItDesktop 3s ease-in-out forwards;
+        animation: turnIt 1.25s linear 1, shrinkItDesktop 1.25s ease-in-out forwards;
     }
 
 
