@@ -96,7 +96,7 @@ p .lead-in {
       background-attachment: fixed;
   }
 .grid-wrap {
-    max-width: 1400px;
+    max-width: 1300px;
     min-width: 330px;
     margin: 0 auto;
     display: grid;
@@ -130,7 +130,7 @@ p .lead-in {
     z-index: 1;
     background-color:rgba(255, 255, 255, .9);
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
     min-width: 330px;
     margin: 0 auto;
 }
