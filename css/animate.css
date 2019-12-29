@@ -4,10 +4,10 @@
 #animateLogo {
     position: absolute;
     z-index: 5;
-    width: 600px;
+    width: 500px;
     top: 10%;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -250px;
     animation: turnIt 1.25s linear 1, shrinkItMobile 1.25s ease-in-out forwards;
 }
 
@@ -23,38 +23,46 @@
 
 @keyframes shrinkItMobile {
     0% {
-        width: 600px;
+        width: 500px;
         top: 10%;
         left: 50%;
-        margin-left: -300px;
+        margin-left: -250px;
         opacity: 1.0;
     }
     95% {
         opacity: 1.0;
     }
     100% {
-        width: 170px;
+        width: 150px;
         top: 375px;
         left: 50%;
-        margin-left: -85px;
+        margin-left: -75px;
         opacity: 0.0;
     }
 }
 @keyframes shrinkItDesktop {
     from {
-        width: 600px;
+        width: 500px;
         top: 10%;
         left: 50%;
-        margin-left: -300px;
+        margin-left: -250px;
     }
     to {
-        width: 170px;
-        top: -50px;
+        width: 150px;
+        top: 0px;
         left: 50%;
-        margin-left: -85px;
+        margin-left: -75px;
     }
 }
 
+
+h3 span {
+    display: none;
+}
+
+@keyframes revealText {
+
+}
 @media only screen and (min-width:768px) {
     #animateLogo {
         animation: turnIt 1.25s linear 1, shrinkItDesktop 1.25s ease-in-out forwards;

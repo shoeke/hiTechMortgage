@@ -1,5 +1,5 @@
 :root {
-    --main-red: #CA5F69;
+    --main-red: #b33641;
     --darkest-blue: #272C2F;
     --main-blue: #304D5F;
     --bg-blue: rgb(74, 100, 126);
@@ -7,7 +7,7 @@
     --fade-blue: rgba(48, 91, 118, 0.673);
     --fade-blue-lt: rgba(48, 91, 118, 0.413);
     --fade-red: rgba(202, 95, 106, 0.450);
-    --main-font-family: 'Raleway', sans-serif;
+    --main-font-family: 'Lato', sans-serif;
   }
 html {
     font-size: 16px;
@@ -27,6 +27,8 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 2.75rem;
     color: #fff;
+    letter-spacing: .5px;
+    font-weight: 400;
 } 
 h2 {
     font-size: 2.5rem;
@@ -35,13 +37,13 @@ h2 {
     margin: 0;
 }
 h3 {
-    font-size: 2.75rem;
+    font-size: 1.75rem;
     font-weight: 300;
     color: var(--main-red);
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 h4 {
-    font-size: 1.35rem;
+    font-size: 1.75rem;
     color: var(--bg-blue);
     margin: .75rem 0;
 }
@@ -59,11 +61,15 @@ a {
     line-height: 1.5;
 }
 .lead-in {
-    font-weight: 800;
+    font-weight: 700;
+}
+
+p .lead-in {
+    font-size: 1.35 rem;
 }
   .tag-text {
     font-family: optima, classico-urw, sans-serif;
-    font-size: 43px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 400;
     text-align: center;
@@ -100,13 +106,14 @@ a {
     "intro"
     "banner" 
     "loan" 
+    "slider-loan"
     "refi"
+    "slider-refi"
     "footer";
 }
  /* global section images*/
 .img-cell {
     width: 100%;
-    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -121,7 +128,7 @@ a {
     position: absolute;
     top: 560px;
     z-index: 1;
-    background-color: #fff;
+    background-color:rgba(255, 255, 255, .9);
     width: 100%;
     max-width: 1400px;
     min-width: 330px;
@@ -136,17 +143,18 @@ a {
 .intro-loan-img {
     background-image: url("../images/carrySmIntro.jpg");
     height: 475px;
-    background-position: 68% 0%;
+    background-position: 68% 0%; 
 }
 .loan-img {
-    background-image: url("../images/upLook.jpg");
-    height: 290px;
-    background-position: 50% 0%;
+    background-image: url("../images/new_couple.jpg");
+    height: 630px;
+    background-position: 50% 10%;
 }
 .refi-img {
-    background-image: url("../images/planning.jpg");
-    height: 380px;
-    background-position: 75% 0%;
+    background-image: url("../images/planningcopy.jpg");
+    height: 630px;
+    background-size: cover;
+    background-position: 50% 0px;
 }
 .home-icon {
     width: 170px;
@@ -184,6 +192,11 @@ a {
     background-color: var(--fade-blue-lt);
     grid-area: loan;
 }
+.slider-loan {
+    background-color: var(--fade-blue-lt);
+    grid-area: slider-loan;
+    display: flex;
+}
 .loan h1 {
     background-color: var(--fade-blue);
 }
@@ -191,6 +204,11 @@ a {
 .refi {
     background-color: var(--fade-red);
     grid-area: refi;
+}
+.slider-refi {
+    background-color: var(--fade-red);
+    grid-area: slider-refi;
+    display: flex;
 }
 .refi h1 {
     background-color: var(--bg-red);
@@ -203,7 +221,7 @@ a {
 .email-form .lead-in {
     width: 100%;
     text-align: left;
-    padding-bottom: .5rem;
+    padding-bottom: 0;
 }
 .email-form input {
     background-color: #fff;
@@ -215,18 +233,19 @@ a {
 .email-form button, .ph-btn {
     background-color: var(--main-blue);
     color: #fff;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: .5rem;
+    font-family: var(--main-font-family);
+    font-size: 1.35rem;
+    font-weight: 400;
+    padding: .5rem 1rem;
     width: 90%;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 3rem 1rem;
     box-shadow: 2px 2px 5px var(--bg-blue);
     border: none;
 }
 .refi .email-form button {
     background-color: var(--main-red);
-    box-shadow: 2px 2px 5px var(--main-red);
+    box-shadow: 2px 2px 1px #3e0b0f52;
 }
 .ph-btn {
     display: block;
@@ -245,6 +264,7 @@ a {
 footer {
     padding: 2rem 1rem;
     grid-area: footer;
+    height: auto;
 }
 footer ul {
     margin: 1rem;
@@ -253,7 +273,7 @@ footer ul {
     align-items: center;
 }
 footer ul li {
-    padding: 5px 15px;
+    padding: 1px 15px;
 }
 footer ul li a:hover {
     color: var(--main-red);
@@ -263,25 +283,36 @@ footer ul li a:hover {
 
 .social-links {
     display: flex;
-    width: 80%;
     justify-content: space-between;
 }
 .social-links img {
     display: flex;
     justify-self: flex-start;
-    padding: 10px;
+    margin: 10px;
+}
+
+.social-links a img:hover {
+    transform: scale(1.25);
+    border-radius: 50%;
+    border: 1px solid var(--main-red);
+}
+#eho {
+    opacity: .5;
 }
 
 @media only screen and (min-width:768px) {
+    h3 {
+        font-size: 2.25rem;
+    }
    
     .grid-wrap {
         
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 200px;
+        grid-template-rows: 1fr .65fr min-content;
         grid-template-areas: 
         "loan refi"
-        "loan refi"
+        "slider-loan slider-refi"
         "footer footer";
     }
     #desktop-only {
@@ -305,28 +336,22 @@ footer ul li a:hover {
     .loan {
         border-right: 5px solid var(--main-red);
     }
-    .loan-img {
-        height: 380px;
-    }
-    .img-cell {
-        margin-bottom: 200px;
-    }
+
+
     .flex-c-row {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
     footer {
-        height: 240px;
-        padding: 2rem 3rem;
+        padding: 0rem 3rem;
     }
     footer .tag-text {
         display: none;
     }
-
-    .social-links {
-        width: 10%;
-    }
+   
+  
+   
     /*change order of footer items*/
     footer ul:nth-of-type(1) {
         order: 2;
