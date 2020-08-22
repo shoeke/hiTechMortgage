@@ -9,6 +9,7 @@
     --fade-red: rgba(202, 95, 106, 0.450);
     --main-font-family: 'Lato', sans-serif;
   }
+
 html {
     font-size: 16px;
     font-family: var(--main-font-family);
@@ -213,6 +214,10 @@ p .lead-in {
 .refi h1 {
     background-color: var(--bg-red);
 }
+input:focus { 
+    outline: none !important;
+
+}
 /* email form */
 .email-form {
     width: 100%;
@@ -229,6 +234,8 @@ p .lead-in {
     width: 90%;
     margin: 0 auto;
     border-radius: 5px;
+    border: none;
+    box-shadow: inset 1px 1px 3px #817a7a45;
 }
 .email-form button, .ph-btn {
     background-color: var(--main-blue);
@@ -240,8 +247,12 @@ p .lead-in {
     width: 90%;
     border-radius: 5px;
     margin: 3rem 1rem;
-    box-shadow: 2px 2px 5px var(--bg-blue);
+    box-shadow: 2px 2px 5px #817a7a61;
     border: none;
+}
+.email-form button:hover {
+    background-color: var(--fade-blue-lt);
+    color: var(--darkest-blue);
 }
 .refi .email-form button {
     background-color: var(--main-red);
@@ -274,6 +285,10 @@ footer ul {
 }
 footer ul li {
     padding: 1px 15px;
+
+}
+footer ul li a, .social-links a img, .email-form button {
+    transition: all 300ms ease-in-out;
 }
 footer ul li a:hover {
     color: var(--main-red);
@@ -290,6 +305,7 @@ footer ul li a:hover {
     justify-self: flex-start;
     margin: 10px;
 }
+
 
 .social-links a img:hover {
     transform: scale(1.25);
@@ -334,7 +350,10 @@ footer ul li a:hover {
         display: none;
     }
     .loan {
-        border-right: 5px solid var(--main-red);
+        border-right: 3px solid var(--main-red);
+    }
+    .refi {
+        border-left: 3px solid var(--main-red);
     }
 
 
@@ -365,7 +384,6 @@ footer ul li a:hover {
     .loan h1, .refi h1 {
         position: relative;
         top: 10%;
-        width: 75%;
     }
 }
 
