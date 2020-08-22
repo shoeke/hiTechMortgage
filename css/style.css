@@ -51,7 +51,7 @@ h4 {
 p {
     font-weight: 300;
     font-size: 1.35rem;
-    line-height: 2;
+    line-height: 1.5;
     padding: 1.5rem;
 }
 a {
@@ -63,6 +63,7 @@ a {
 }
 .lead-in {
     font-weight: 700;
+    padding-top: 0;
 }
 
 p .lead-in {
@@ -70,7 +71,7 @@ p .lead-in {
 }
   .tag-text {
     font-family: optima, classico-urw, sans-serif;
-    font-size: 60px;
+    font-size: 45px;
     font-style: normal;
     font-weight: 400;
     text-align: center;
@@ -127,7 +128,7 @@ p .lead-in {
 .banner {
     grid-area: banner;
     position: absolute;
-    top: 560px;
+    top: 380px;
     z-index: 1;
     background-color:rgba(255, 255, 255, .9);
     width: 100%;
@@ -136,24 +137,24 @@ p .lead-in {
     margin: 0 auto;
 }
 .spacer {
-    height: 345px;
+    height: 325px;
     background-color: #fff;
     box-shadow: inset 0px 2px 3px var(--fade-blue-lt);
 }
 
 .intro-loan-img {
     background-image: url("../images/carrySmIntro.jpg");
-    height: 475px;
-    background-position: 68% 0%; 
+    height: 275px;
+    background-position: 68% 26%; 
 }
 .loan-img {
     background-image: url("../images/new_couple.jpg");
-    height: 630px;
-    background-position: 50% 10%;
+    height: 329px;
+    background-position: 50% 15%;
 }
 .refi-img {
     background-image: url("../images/planningcopy.jpg");
-    height: 630px;
+    height: 345px;
     background-size: cover;
     background-position: 50% 0px;
 }
@@ -163,7 +164,7 @@ p .lead-in {
     display: flex;
     align-self: center;
     position: relative;
-    top: 375px;
+    top: 190px;
 }
 .intro .tagline {
     margin-top: 100px;
@@ -356,7 +357,6 @@ footer ul li a:hover {
         border-left: 3px solid var(--main-red);
     }
 
-
     .flex-c-row {
         flex-direction: row;
         align-items: center;
@@ -368,10 +368,9 @@ footer ul li a:hover {
     footer .tag-text {
         display: none;
     }
-   
-  
-   
+
     /*change order of footer items*/
+    
     footer ul:nth-of-type(1) {
         order: 2;
     }
@@ -385,6 +384,33 @@ footer ul li a:hover {
         position: relative;
         top: 10%;
     }
+
+    /*keep layout for larger size*/
+
+    .intro-loan-img {
+        height: 475px;
+        background-position: 68% 0%; 
+    }
+    .home-icon {
+        top: 375px;
+    }
+    .spacer {
+        height: 345px;
+    }
+    /*
+    .banner {
+        top: 560px;
+    }*/
+    .loan-img {
+        height: 630px;
+        background-position: 50% 10%;
+    }
+    .refi-img {
+        height: 630px;
+    }
+    .tag-text {
+        font-size: 60px;
+    }
 }
 
 @media only screen and (min-width:1000px) {
@@ -393,4 +419,9 @@ footer ul li a:hover {
     align-items: center;
     justify-content: space-between;
  }
+}
+@media only screen and (min-width: 535px) {
+    p {
+        line-height: 2;
+    }
 }
