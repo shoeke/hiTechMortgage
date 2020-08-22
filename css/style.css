@@ -174,7 +174,7 @@ p .lead-in {
     padding: .5rem 3rem;
     margin-bottom: 1.5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 .triangle-icon {
@@ -423,5 +423,13 @@ footer ul li a:hover {
 @media only screen and (min-width: 535px) {
     p {
         line-height: 2;
+    }
+}
+@media only screen and (min-width: 355px) {
+    .spacer {
+        height: 355px;
+    }
+    .banner {
+        padding: 0 5px;
     }
 }
